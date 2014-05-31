@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[numbers, square, comma]{natbib}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage[hyphens]{url}
+\usepackage{ams math}
+\usepackage[hmargin=2cm,vmargin=3.5cm]{geometry}
+\newcommand{\minitab}[2][c]{\begin{tabular}{#1}#2\end{tabular}}
+\title{A Self-contained Tex Report Template}
+\author{Mingyuan Xia}
+\begin{document}
+\maketitle
+\section{Introduction}
+I prefer plain styled reports, not too cozy but clear. This template compiles with pdflatex and contains most of the commonly used tex snippets. I will keep it~\cite{echo} updated.
+\begin{table}[h]
+\centering
+%\footnotesize
+\begin{tabular}{|l|c|r|}
+\hline
+left-aligned & middle-aligned & right-aligned \\
+\hline \hline
+& \cellcolor[gray]{0.9} & \\
+\hline
+& & \\
+\multirow{2}{*}{multirow}
+& \~\_\~ & @\_@ \\
+& =\_= & -w- \\
+\hline
+\end{tabular}
+\caption{A standard table}
+\label{tab:eample}
+\end{table}
+
+{
+\footnotesize
+\bibliographystyle{abbrv}
+\bibliography{report}
+}
+
+\end{document}
