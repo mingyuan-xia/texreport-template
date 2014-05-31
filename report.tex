@@ -1,16 +1,24 @@
 \documentclass{article}
-\usepackage[numbers, square, comma]{natbib}
+
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage[table]{xcolor}
 \usepackage[hyphens]{url}
-\usepackage{ams math}
+\usepackage{amsmath}
 \usepackage[hmargin=2cm,vmargin=3.5cm]{geometry}
+
 \newcommand{\minitab}[2][c]{\begin{tabular}{#1}#2\end{tabular}}
+\newcommand{\iwantmyowncontent}[1]{#1}
+%\newcommand{\iwantmyowncontent}[1]{}
+
 \title{A Self-contained Tex Report Template}
 \author{Mingyuan Xia}
+
 \begin{document}
+
+\iwantmyowncontent{
 \maketitle
+
 \section{Introduction}
 I prefer plain styled reports, not too cozy but clear. This template compiles with pdflatex and contains most of the commonly used tex snippets. I will keep it~\cite{echo} updated.
 \begin{table}[h]
@@ -31,11 +39,11 @@ left-aligned & middle-aligned & right-aligned \\
 \caption{A standard table}
 \label{tab:eample}
 \end{table}
-
-{
-\footnotesize
+% bib now
+{\footnotesize
 \bibliographystyle{abbrv}
-\bibliography{report}
-}
+\bibliography{report, another}}
+
+} % i want my own content
 
 \end{document}
